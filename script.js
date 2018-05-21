@@ -24,3 +24,26 @@ function checkEmail (emailString) {
 
 console.log(checkEmail("zsajid014@smith.com"));
 console.log(checkEmail("zsajid014smith.info"));
+
+//Task 4
+var library = [ 
+   {
+       author: 'Bill Gates',
+       title: 'The Road Ahead',
+       readingStatus: true
+   },
+   {
+       author: 'Steve Jobs',
+       title: 'Walter Isaacson',
+       readingStatus: true
+   },
+   {
+       author: 'Suzanne Collins',
+       title:  'Mockingjay: The Final Book of The Hunger Games', 
+       readingStatus: false
+   }];
+function getReadingStatus(index) {
+    return library[index].readingStatus;
+}
+
+console.log(getReadingStatus(2));
