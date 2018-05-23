@@ -47,3 +47,50 @@ function getReadingStatus(index) {
 }
 
 console.log(getReadingStatus(2));
+
+// Task 5 a
+var cart = [ 
+   {
+       name: 'Shoes',
+       price: 560,
+       quantity: 4
+   },
+   {
+       name: 'Regular Tees',
+       price: 455.50,
+       quantity: 6
+   },
+   {
+       name: 'Socks',
+       price: 65.99,
+       quantity: 2
+   }];
+function addItem (newItem) {
+    cart.push(newItem);
+    console.log(cart);
+}
+var newItem = {name: "Watch", price: 64, quantity: 1};
+addItem(newItem);
+
+// Task 5 b
+cart.sort();
+// Task 5c
+
+function findByName (givenName) {
+    for  (var i = 0; i < cart.length; i++) {
+        if (cart[i].name === givenName) {
+            console.log("Name : " +  cart[i].name, "Price: " + cart[i].price, "Quantity: " + cart[i].quantity);
+        }
+    }
+}
+console.log("Watch");
+
+function ttlBill () {
+    var totalBill = 0;
+    for  (var i = 0; i < cart.length; i++) {
+        totalBill += cart[i].quantity * cart[i].price;
+    }
+    return totalBill;
+    
+}
+console.log(ttlBill());
