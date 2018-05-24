@@ -73,17 +73,17 @@ var newItem = {name: "Watch", price: 64, quantity: 1};
 addItem(newItem);
 
 // Task 5 b
-cart.sort();
+console.log(cart.sort(function(a, b){return a.quantity - b.quantity}));
 // Task 5c
 
 function findByName (givenName) {
     for  (var i = 0; i < cart.length; i++) {
-        if (cart[i].name === givenName) {
-            console.log("Name : " +  cart[i].name, "Price: " + cart[i].price, "Quantity: " + cart[i].quantity);
+            if (cart[i].name === givenName) {
+                return [cart[i].name, cart[i].price, cart[i].quantity];
         }
     }
 }
-console.log("Watch");
+console.log(findByName("Watch"));
 
 function ttlBill () {
     var totalBill = 0;
