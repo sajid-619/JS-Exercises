@@ -85,6 +85,7 @@ function findByName (givenName) {
 }
 console.log(findByName("Watch"));
 
+// Task 5 d
 function ttlBill () {
     var totalBill = 0;
     for  (var i = 0; i < cart.length; i++) {
