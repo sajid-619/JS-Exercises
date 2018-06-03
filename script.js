@@ -77,11 +77,13 @@ console.log(cart.sort(function(a, b){return a.quantity - b.quantity}));
 // Task 5c
 
 function findByName (givenName) {
+    var x = [];
     for  (var i = 0; i < cart.length; i++) {
             if (cart[i].name === givenName) {
-                return [cart[i].name, cart[i].price, cart[i].quantity];
+               x.push("{name: " + cart[i].name + ", " + " price: " + cart[i].price + ", " + " quantity : " + cart[i].quantity + "}");
         }
     }
+    return x;
 }
 console.log(findByName("Watch"));
 
